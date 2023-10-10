@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Array } from "./react/array";
+import { ArrayObject } from "./react/arrayObject";
+import { ChildrenComponent } from "./react/children";
+import { Counter } from "./react/counter";
+import { Event } from "./react/event";
+import Form from "./react/form";
+import { ImmerCounter } from "./react/immer";
+import { ListComponent } from "./react/list";
+import { NestedObject } from "./react/nestedObject";
+import { Object } from "./react/object";
+import PropGreeting from "./react/prop";
+import ReactHookForm from "./react/reacthookform";
+import ParentComponent from "./react/shareStateProp";
+import { Count, CounterProvider } from "./react/shareStatecontext";
+import StateCounter from "./react/state";
+import UseEffectCounter from "./react/useEffect";
+import UseStateCounter from "./react/useState";
+import UseStateUseRef from "./react/useStateuseRef";
+import ZodForm from "./react/zod";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Counter />
+      <ListComponent />
+      <Event />
+      <PropGreeting name="React" />
+      <StateCounter />
+      <UseStateCounter />
+      <ChildrenComponent>
+        <p>This is my Children Component</p>
+      </ChildrenComponent>
+      <Object />
+      <NestedObject />
+      <Array />
+      <ArrayObject />
+      <ImmerCounter />
+      <ParentComponent />
+      <CounterProvider>
+        <Count />
+      </CounterProvider>
+      <Form />
+      <ReactHookForm />
+      <ZodForm />
+      <UseEffectCounter />
+      <UseStateUseRef />
+    </>
   );
 }
 
